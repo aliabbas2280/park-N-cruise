@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cruise-px: clamp(16px, 5vw, 60px);
+  --cruise-py: clamp(32px, 4vw, 48px);
+  --cruise-gap: clamp(20px, 3vw, 32px);
+  --cruise-img-w: clamp(140px, 18vw, 240px);
+  --cruise-img-h: clamp(220px, 28vw, 390px);
+  --cruise-h2: clamp(24px, 3.5vw, 42px);
+  --cruise-p: clamp(14px, 1.4vw, 17px);
+  --cruise-btn-font: clamp(12px, 1.2vw, 15px);
+  --cruise-btn-py: clamp(13px, 1.8vw, 18px);
+  --cruise-btn-px: clamp(24px, 3.5vw, 44px);
+}
+
+.cruise-section {
+  display: flex;
+  align-items: center;
+  padding: var(--cruise-py) var(--cruise-px);
+  gap: var(--cruise-gap);
+  max-width: 1300px;
+  margin: 0 auto;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+.images-container {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(10px, 1.5vw, 16px);
+  flex-shrink: 0;
+}
+
+.img-left {
+  width: var(--cruise-img-w);
+  height: var(--cruise-img-h);
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.img-right {
+  width: var(--cruise-img-w);
+  height: var(--cruise-img-h);
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-top: clamp(20px, 4vw, 40px);
+}
+
+.content {
+  flex: 1;
+  padding-left: clamp(0px, 2vw, 24px);
+  min-width: 0;
+}
+
+.content h2 {
+  font-size: var(--cruise-h2);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: clamp(16px, 2.5vw, 28px);
+}
+
+.content p {
+  font-size: var(--cruise-p);
+  line-height: 1.75;
+  color: #222;
+  margin-bottom: clamp(12px, 1.8vw, 20px);
+}
+
+.content p strong {
+  font-weight: 700;
+  color: #111;
+}
+
+.btn-reserve {
+  display: inline-block;
+  margin-top: clamp(8px, 1.2vw, 12px);
+  background: #f5a623;
+  color: #fff;
+  font-size: var(--cruise-btn-font);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: var(--cruise-btn-py) var(--cruise-btn-px);
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn-reserve:hover {
+  background: #e0951a;
+  transform: translateY(-2px);
+}
+
+.btn-reserve:focus-visible {
+  outline: 3px solid #f5a623;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+  .cruise-section {
+    gap: clamp(20px, 2.5vw, 28px);
+  }
+
+  .img-left,
+  .img-right {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cruise-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 28px;
+    gap: 28px;
+  }
+
+  .images-container {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .img-left,
+  .img-right {
+    width: clamp(140px, 42vw, 240px);
+    height: clamp(200px, 55vw, 340px);
+    flex: 1 1 0;
+    max-width: 260px;
+  }
+
+  .img-right {
+    margin-top: clamp(16px, 5vw, 32px);
+  }
+
+  .content {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .btn-reserve {
+    display: block;
+    width: fit-content;
+    margin: 12px auto 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .cruise-section {
+    padding: 28px 16px;
+    gap: 24px;
+  }
+
+  .images-container {
+    gap: 10px;
+  }
+
+  .img-left,
+  .img-right {
+    width: clamp(120px, 40vw, 200px);
+    height: clamp(170px, 52vw, 280px);
+    border-radius: 8px;
+  }
+
+  .content h2 {
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 420px) {
+  .images-container {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .img-left,
+  .img-right {
+    flex: 1;
+    width: 100%;
+    max-width: none;
+    height: clamp(150px, 48vw, 220px);
+    border-radius: 8px;
+  }
+
+  .img-right {
+    margin-top: 20px;
+  }
+
+  .btn-reserve {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cruise-section {
+    padding: 24px 12px;
+  }
+
+  .img-left,
+  .img-right {
+    height: clamp(130px, 45vw, 180px);
+    border-radius: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-reserve {
+    transition: none;
+  }
+}
+
+@media print {
+  .cruise-section {
+    background: #fff;
+    display: block;
+  }
+
+  .images-container {
+    display: none;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .btn-reserve {
+    display: none;
+  }
+}
