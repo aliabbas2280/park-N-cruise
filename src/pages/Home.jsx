@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaBus } from "react-icons/fa";
 import "../CSS/Home.css";
 import Logo from "../images/Logo.png"
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
             <a href="#contact" onClick={() => setMenuOpen(false)}>CONTACT US</a>
           </li>
           <li className="find-shuttle">
-            <a href="#shuttle" onClick={() => setMenuOpen(false)}><span className="shuttle-icon">🚌</span>FIND MY SHUTTLE</a>
+            <a href="#shuttle" onClick={() => setMenuOpen(false)}><FaBus className="shuttle-icon" />FIND MY SHUTTLE</a>
           </li>
         </ul>
       </nav>
