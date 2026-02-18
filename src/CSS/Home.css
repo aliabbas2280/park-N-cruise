@@ -110,41 +110,14 @@ body {
   text-underline-offset: 10px;
 }
 
-.navbar-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 6px;
-  background: none;
-  border: none;
-  z-index: 1100;
-}
-
-.navbar-hamburger span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.navbar-hamburger.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.navbar-hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-hamburger.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+.checkmark {
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .shuttle-icon {
-  color: #d49200;
-  font-size: 20px;
+  color: #df9800;
+  font-size: 16px;
 }
 
 .hero {

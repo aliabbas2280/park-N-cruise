@@ -4,10 +4,6 @@ import Logo from "../images/Logo.png"
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <div>
       <nav className="navbar">
@@ -20,15 +16,7 @@ function Home() {
           </div>
         </a>
 
-        <button 
-          className={`navbar-hamburger ${menuOpen ? 'open' : ''}`}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      
 
         <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
           <li className="book-now">
