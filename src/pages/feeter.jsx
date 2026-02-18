@@ -1,6 +1,6 @@
 // Footer.jsx
 import React from 'react';
-import '../CSS/Feeter.css';
+import '../CSS/feeter.css';
 import Logo from '../images/Logo.png'   
 const Feeter = () => {
   const navLinks = [
