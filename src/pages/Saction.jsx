@@ -34,8 +34,8 @@ const Saction = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn btn--orange">Book Now</button>
-            <button className="btn btn--blue">Learn More</button>
+            <button className="btn btn--orange">Book Parking Now</button>
+            <button className="btn btn--blue">Want To Save More</button>
           </div>
         </div>
 

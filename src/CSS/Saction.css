@@ -72,19 +72,21 @@
 
 .hero-buttons {
   display: flex;
+  justify-content: space-evenly;
   gap: clamp(10px, 1.5vw, 16px);
   align-items: center;
   flex-wrap: wrap;
 }
 
 .btn {
+  width: 250px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: var(--hero-btn-h);
   padding: 0 var(--hero-btn-px);
   border: none;
-  border-radius: 6px;
+  border-radius: 30px;
   font-family: "Nunito Sans", sans-serif;
   font-size: var(--hero-btn-font);
   font-weight: 700;

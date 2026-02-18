@@ -104,6 +104,12 @@ body {
   text-underline-offset: 10px;
 }
 
+.book-now a,
+.find-shuttle a {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
 .navbar-hamburger {
   display: none;
   flex-direction: column;
