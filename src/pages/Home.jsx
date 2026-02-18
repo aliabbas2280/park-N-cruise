@@ -17,7 +17,15 @@ function Home() {
           </div>
         </a>
 
-      
+        <button 
+          className={`navbar-hamburger ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
           <li className="book-now">
@@ -46,7 +54,6 @@ function Home() {
       <section className="hero">
         <div className="hero-bg" />
 
-    
         <div className="hero-overlay" />
 
         <div className="hero-content">

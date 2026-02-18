@@ -63,7 +63,6 @@ export default function Cruise() {
             />
           </div>
 
-          {/* Right Accordion */}
           <div className="faq-accordion">
             {faqs.map((faq) => (
               <div
